@@ -1,0 +1,88 @@
+@import vars, fonts
+
+// fonts
+=ArizoniaCursive()
+  font-family: Arizonia, cursive
+=CommissionerSansSerif()
+  font-family: Commissioner, sans-serif
+=GaramondSerif()
+  font-family: EB Garamond, serif
+=KronaOneSansSerif()
+  font-family: Krona One, sans-serif
+=MerriweatherSerif()
+  font-family: 'Merriweather', serif
+=MontserratSansSerif()
+  font-family: Montserrat, sans-serif
+
+// absolute
+=absoluteTL($top, $left)
+  position: absolute
+  top: $top
+  left: $left
+=absoluteTLSingle($pos)
+  +absoluteTL($pos, $pos)
+=absoluteBL($bottom, $left)
+  position: absolute
+  bottom: $bottom
+  left: $left
+=absoluteBLSingle($pos)
+  +absoluteBL($pos)
+
+// animation
+=animation($duration, $iterations, $name)
+  animation-duration: $duration
+  animation-iteration-count: $iterations
+  animation-name: $name
+
+// flex
+=flexDir($direction)
+  display: flex
+  flex-direction: $direction
+=flexDirJcC($direction)
+  +flexDir($direction)
+  justify-content: center
+=flexDirAiC($direction)
+  +flexDir($direction)
+  align-items: center
+=flexDirCC($direction)
+  +flexDirJcC($direction)
+  align-items: center
+=flexJcC()
+  display: flex
+  justify-content: center
+=flexAiC()
+  display: flex
+  align-items: center
+=flexCC()
+  +flexJcC
+  align-items: center
+=flexJcSb()
+  display: flex
+  justify-content: space-between
+
+// margin
+=marginTL($top, $left)
+  margin-top: $top
+  margin-left: $left
+=marginTLSingle($value)
+  +marginTL($value)
+=marginBL($bottom, $left)
+  margin-bottom: $bottom
+  margin-left: $left
+=marginBLSingle($value)
+  +marginBL($value)
+
+// text
+=textCSW($color, $size, $weight)
+  color: $color
+  font-size: $size
+  font-weight: $weight
+=textCSWH($color, $size, $weight, $height)
+  +textCSW($color, $size, $weight)
+  line-height: $height
+=textCSWS($color, $size, $weight, $spacing)
+  +textCSW($color, $size, $weight)
+  letter-spacing: $spacing
+=textCSWHS($color, $size, $weight, $height, $spacing)
+  +textCSWH($color, $size, $weight, $height)
+  letter-spacing: $spacing
